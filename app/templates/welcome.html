@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="liceo">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Liceo Panamericano</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Dosis:400,500' rel='stylesheet' type='text/css'>
+    <link href="static/css/carousel.css" rel="stylesheet">
+  </head>
+
+  <body ng-controller="FlowController">
+<!-- Modal -->
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <span class="google-in"><i class="flaticon-googleplus"></i>Ingresa Con Google</span>
+        <hr>
+        <h4> Ingresa con correo</h4>
+        <form class="form-signin" method="POST" action="/signin">
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Recordar
+          </label>
+        </div>
+        <button class="btn btn-lg btn-danger btn-block" type="submit">Ingresar</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- NAVBAR
+================================================== -->   
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+              <a  ng-click="changeView(0)" class="navbar-brand" href="#"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse more">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a ng-click="changeView(1)" href="#Colegio"><figure class="icon school-icon"></figure>Colegio</a></li>
+                <li><a ng-click="changeView(2)" href="#Estudiantes"><figure class="icon student-icon"></figure>Comunidad</a></li>
+                <li><a ng-click="changeView(4)" href="#Curriculo"><figure class="icon curriculum-icon"></figure>Currículo</a></li>
+                <li><a ng-click="changeView(3)" href="#Contacto"><figure class="icon contact-icon"></figure>Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+<span class="ingresar" data-toggle="modal" data-target="#myModal">Ingresar</span>
+
+    
+
+    <!-- Carousel
+    ================================================== -->
+  <div class="mainLoadIn">
+   <div class="container-fluid mainLoadContainer">
+    <slider ng-show="flow == 0"></slider>
+    <colegio ng-show="flow == 1"></colegio>
+    <estudiantes ng-show="flow == 2"></estudiantes>
+    <contacto ng-show="flow == 3"></contacto>
+   </div>
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="static/js/angular.min.js"></script>
+    <script src="static/js/welcome.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB783APRLL3e7UlyK5bYaYm59zDJvjcseQ"></script>
+  </body>
+</html>

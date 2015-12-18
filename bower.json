@@ -1,0 +1,25 @@
+{
+  "name": "liceoProject",
+  "authors": [
+    "Daniel Ruiz Danielruiz@ruizoft.com"
+  ],
+  "description": "school project",
+  "main": "liceoProject/app/static",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "liceopanamericano.edu.co",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-elements": "PolymerElements/iron-elements#~1.0.7",
+    "gold-elements": "PolymerElements/gold-elements#~1.0.1"
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ADMIN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+    <script src="../../static/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="../../static/css/main.css" rel="stylesheet">
+    <link rel="import" href="../../static/bower_components/paper-input/paper-input.html">
+    <link rel="import" href="../../static/bower_components/gold-email-input/gold-email-input.html">
+  </head>
+
+  <body ng-controller="FlowController">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li ng-class="{'active': tab == 0}" ng-click="setTab(0)"><a href="#Principal">Principal <span class="sr-only">(current)</span></a></li>
+            <li ng-class="{'active': tab == 1}" ng-click="setTab(1)"><a href="#Usuarios">Usuarios</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+           
+          </ul>
+          <ul class="nav nav-sidebar">
+            
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <principaladmin ng-show="tab == 0"></principaladmin>
+        <usuarios ng-show="tab == 1"></usuarios>
+
+         
+        </div>
+      </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../static/js/angular.min.js"></script>
+    <script src="../../static/js/main-admin.js"></script>
+  </body>
+</html>
+
